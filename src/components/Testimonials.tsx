@@ -46,23 +46,23 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Success{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Stories
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Hear from our graduates who have successfully transformed their careers and landed positions at top tech companies.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div key={index} className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black rounded-3xl p-8 shadow-lg hover:shadow-2xl dark:shadow-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-800">
               <div className="flex items-center mb-6">
                 <img 
                   src={testimonial.image} 
@@ -70,8 +70,8 @@ const Testimonials = () => {
                   className="w-16 h-16 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
                 </div>
               </div>
               
@@ -81,7 +81,7 @@ const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-gray-700 leading-relaxed italic">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
             </div>
@@ -89,16 +89,16 @@ const Testimonials = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Join Our Success Stories</h3>
-            <p className="text-gray-600 mb-8 text-lg">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 rounded-3xl p-12 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Join Our Success Stories</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
               Ready to write your own success story? Start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Get Started Now
               </button>
-              <button className="border-2 border-gray-300 hover:border-blue-500 text-gray-700 hover:text-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+              <button className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>
